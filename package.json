@@ -1,16 +1,19 @@
 {
   "name": "tg_bot",
   "version": "1.0.0",
-  "main": "bot.js",
+  "main": "",
   "scripts": {
-    "dev": "nodemon bot.js",
-    "start": "node bot.js"
+    "dev": "nodemon main/bot.js ",
+    "start": "node main/bot.js "
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "axios": "^1.5.0",
     "dotenv": "^16.3.1",
+    "googleapis": "^126.0.1",
+    "mysql": "^2.18.1",
     "telegraf": "^4.12.2"
   },
   "devDependencies": {

@@ -12,6 +12,7 @@ export function userVerifyPassword(text)
 {
     return text === process.env.PASSWORD;
 }
+
 export async function userStartVerify(bot,ctx,chatId,text)
 {
     if(userVerifyPassword(text))
@@ -23,8 +24,8 @@ export async function userStartVerify(bot,ctx,chatId,text)
     {
        await userIncorrectPassword(bot,chatId);
     }
-
 }
+
 export async function userIncorrectPassword(bot,chatId)
 {
     if (incorrectAttempts >= 5)
@@ -52,6 +53,7 @@ export async function userIncorrectPassword(bot,chatId)
         incorrectAttempts++;
     }
 }
+
 export async function setup(bot,chatId)
 {
     // Затримка на 2 секунди
