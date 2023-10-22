@@ -6,11 +6,7 @@ import {MYSQL_Database} from "../databaseMySQL/database.js";
 import * as dotenv from 'dotenv' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
 dotenv.config();
 
-
-const tgToken = process.env.BOT_TOKEN;
-console.log(tgToken);
-
-const bot = new Telegraf("6318712804:AAGzTXeGQ0MDrgmEBhtGiAAbvSmAcBdiXYk");
+const bot = new Telegraf(process.env.BOT_TOKEN);
 export const mySQLDatabase = new MYSQL_Database();
 
 bot.command("start", (ctx) => handleStartCommand(ctx, resetSession));
